@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+  padding: 20px 10px 70px 10px;
+  margin: 20px;
+  width: 250px;
+  position: relative;
+  border-radius: 1rem;
+}
+.container .items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+.container .items .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+.container .items .item .icons {
+  position: absolute;
+  right: 15px;
+}
+.container .items .item:hover {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+}
+.container .button {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .button button {
+  padding: 10px 50px 10px 50px;
+  border: none;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: blue;
+  color: whitesmoke;
+  border-radius: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.container .button button:hover {
+  color: blue;
+  background-color: whitesmoke;
+}
