@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
-  margin: 20px;
+  margin: 4;
   padding: 10px;
   background-color: aliceblue;
 }
@@ -58,6 +58,9 @@
   gap: 1rem;
   background-color: aliceblue;
 }
+.header .sidesearch .icons .sideIcons {
+  cursor: pointer;
+}
 .header .sidesearch .search {
   display: flex;
   flex-direction: row;
@@ -74,6 +77,7 @@
   margin-left: -140px;
   color: blue;
 }
+
 .header .sidesearch .search input {
   padding: 5px 5px 5px 3px;
   margin-left: -6px;
@@ -87,6 +91,7 @@
   width: 25px;
   height: 25px;
   border-radius: 1.5rem;
+  cursor: pointer;
 }
 .sideOptions .sideNav {
   display: flex;
@@ -122,6 +127,42 @@
   right: 15px;
   cursor: pointer;
 }
+.profileView {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+.profileView .profileView2 .profileViewOptions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profileView .profileView2 .profileViewOptions .profileIcons {
+  position: absolute;
+  right: 15px;
+}
+.profileView .profileView2 {
+  padding: 10px;
+  margin-top: 5px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+  border-radius: 1rem;
+}
+.profileView .profileView2 #logout {
+  color: red;
+}
+.profileView .profileViewOptions {
+  padding: 10px 40px 10px 20px;
+  border-radius: 0.5rem;
+}
+.profileView .profileViewOptions:hover {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+}
 @media screen and (min-width: 650px) and (max-width: 950px) {
   .header .nav {
     display: none;
@@ -130,17 +171,21 @@
     padding: 5px;
   }
   .header .menu {
-    display: none;
+    display: block;
   }
   .sideOptions .sideNav {
-    display: none;
+    display: block;
   }
 }
 @media screen and (max-width: 650px) {
   .header .nav {
     display: none;
   }
-  .header .sidesearch {
+  .header .sidesearch .search {
+    padding: 0;
+    width: auto;
+  }
+  .header .sidesearch .icons {
     display: none;
   }
   .header .menu {
@@ -148,6 +193,10 @@
   }
   .header .menu .menuClose {
     cursor: pointer;
+  }
+  .sideOptions .sideNav {
+    width: 200px;
+    gap: 5px;
   }
   .header .combine .name {
     font-size: 25px;
@@ -162,6 +211,26 @@
     display: none;
   }
   .sideOptions .sideNav {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header .menu {
+    display: block;
+  }
+  .sideOptions .sideNav {
+    display: none;
+  }
+  .header .sidesearch .search {
+    display: none;
+  }
+  .header .sidesearch .profile {
+    display: none;
+  }
+  .sideOptions .sideNav {
+    display: block;
+  }
+  .profileView {
     display: none;
   }
 }

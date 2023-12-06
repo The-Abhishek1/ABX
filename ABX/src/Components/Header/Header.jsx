@@ -9,11 +9,18 @@ import { IoMdMenu } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
-
+import { MdOutlineLightMode } from "react-icons/md";
+import { IoMdLogOut } from "react-icons/io";
+import { IoSettings } from "react-icons/io5";
 function Header() {
-  //States for handling closing and opening menu
-
+  //State for handling closing and opening menu
   const [showOptions, setShowOptions] = useState(false);
+
+  //State for toggling Dark mode and Light Mode
+  const [dark, setDark] = useState(true);
+
+  //state  for toggloing profile option
+  const [prfoileshow, setProfileShow] = useState(false);
   return (
     <>
       <div className={h.header}>
@@ -44,11 +51,32 @@ function Header() {
             <input type="text" name="search" id="" placeholder="Search" />
           </div>
           <div className={h.icons}>
-            <IoMdLock size={24} />
-            <FaCircleInfo size={20} />
-            <MdDarkMode size={24} />{" "}
+            <IoMdLock size={24} className={h.sideIcons} />
+            <FaCircleInfo size={20} className={h.sideIcons} />
+            {dark ? (
+              <MdDarkMode
+                size={24}
+                className={h.sideIcons}
+                onClick={(e) => {
+                  setDark(!dark);
+                }}
+              />
+            ) : (
+              <MdOutlineLightMode
+                size={24}
+                className={h.sideIcons}
+                onClick={(e) => {
+                  setDark(!dark);
+                }}
+              />
+            )}
           </div>
-          <div className={h.profile}>
+          <div
+            className={h.profile}
+            onClick={(e) => {
+              setProfileShow(!prfoileshow);
+            }}
+          >
             <img src={logo} alt="" />
           </div>
         </div>
@@ -99,6 +127,25 @@ function Header() {
                 contact
               </NavLink>
               <IoIosArrowDroprightCircle className={h.arrow} size={20} />
+            </div>
+          </div>
+        </div>
+      ) : null}
+      {prfoileshow ? (
+        <div className={h.profileView}>
+          <div className={h.profileView2}>
+            <div className={h.profileViewOptions} id={h.profileName}>
+              👋 Hey Idiot
+            </div>
+          </div>
+
+          <div className={h.profileView2}>
+            <div className={h.profileViewOptions}>
+              Profile Settings <IoSettings className={h.profileIcons} />
+            </div>
+            <div className={h.profileViewOptions} id={h.logout}>
+              Log out
+              <IoMdLogOut className={h.profileIcons} />
             </div>
           </div>
         </div>
