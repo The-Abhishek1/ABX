@@ -9,9 +9,12 @@ import { FaImages } from "react-icons/fa6";
 import { TbBulbFilled } from "react-icons/tb";
 import { FaLink } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
+import Chatgpt from "./ChatGPT/Chatgpt";
 
 function Sidebar() {
   const [showHide, setShowHide] = useState(false);
+  //State for hiding and showing chatGPT page
+  const [gpt, setGpt] = useState(false);
   return (
     <>
       <div
@@ -37,7 +40,7 @@ function Sidebar() {
             My Projects{" "}
             <IoIosArrowDroprightCircle className={s.icons} size={18} />
           </div>
-          <div className={s.item}>
+          <div className={s.item} onClick={(e) => setGpt(!gpt)}>
             <BsStars size={20} className={s.firstIcons} />
             ChatGPT <IoIosArrowDroprightCircle className={s.icons} size={18} />
           </div>
@@ -83,7 +86,7 @@ function Sidebar() {
               My Projects{" "}
               <IoIosArrowDroprightCircle className={s.icons} size={18} />
             </div>
-            <div className={s.item}>
+            <div className={s.item} onClick={(e) => setGpt(!gpt)}>
               <BsStars size={20} className={s.firstIcons} />
               ChatGPT{" "}
               <IoIosArrowDroprightCircle className={s.icons} size={18} />
@@ -114,11 +117,12 @@ function Sidebar() {
               <IoIosArrowDroprightCircle className={s.icons} size={18} />
             </div>
           </div>
-          <div className={s.button}>
+          <div className={s.button} id={s.button}>
             <button>Set API Key</button>
           </div>
         </div>
       ) : null}
+      {gpt ? <Chatgpt /> : null}
     </>
   );
 }

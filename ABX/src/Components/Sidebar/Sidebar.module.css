@@ -26,6 +26,7 @@
   padding: 10px;
   border-radius: 0.5rem;
   position: relative;
+  cursor: pointer;
 }
 .container .items .item .icons {
   position: absolute;
@@ -44,6 +45,7 @@
   position: relative;
   top: 70px;
 }
+
 .container .button button {
   padding: 10px 50px 10px 50px;
   border: none;
@@ -69,8 +71,15 @@
   background-color: aliceblue;
   border-radius: 0.5rem;
   padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
 }
-
+#container2 {
+  padding: 20px 10px 35px 10px;
+}
+#button {
+  top: 30px;
+}
 @media screen and (min-width: 480px) and (max-width: 650px) {
   .container {
     display: none;
@@ -83,7 +92,7 @@
     padding: 80px 10px 10px 10px;
   }
   .container .button button {
-    padding: 10px 15px 10px 15px;
+    padding: 10px 20px 10px 20px;
     border-radius: 1rem;
   }
   .home {
@@ -91,6 +100,7 @@
   }
   #container2 {
     display: block;
+    padding: 20px 10px 20px 10px;
   }
 }
 

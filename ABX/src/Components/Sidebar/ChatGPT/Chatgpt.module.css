@@ -1,0 +1,132 @@
+.container {
+  margin: 10px;
+  padding: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  top: 90px;
+  left: 290px;
+  width: fit-content;
+  flex-grow: 1;
+  height: 82.3%;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+}
+.container .sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+}
+.container .sidebar .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 10px 20px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.container .sidebar .button button {
+  padding: 5px 10px 5px 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+.container .sidebar .history {
+  position: absolute;
+  top: 100px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  padding: 20px;
+  cursor: pointer;
+}
+.container .sidebar .history .historyitems {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .sidebar .history .historyitems li {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  list-style: none;
+  padding: 10px 30px 10px 30px;
+}
+.container .sidebar .made {
+  font-weight: bold;
+}
+.container .chatBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+}
+.container .chatBox .ABX {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.container .chatBox .output {
+  padding: 10px;
+  width: 100%;
+  height: 400px;
+}
+.container .chatBox .output .outputitems {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+}
+.container .chatBox .output .outputitems .outputeachitem {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  padding: 10px 20px 10px 20px;
+  border-radius: 0.5rem;
+}
+.container .chatBox .input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  border-radius: 1rem;
+  gap: 5px;
+  padding: 5px 10px 5px 20px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  cursor: pointer;
+}
+.container .chatBox .input input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.container .info {
+  margin: 10px;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: none;
+  }
+}
