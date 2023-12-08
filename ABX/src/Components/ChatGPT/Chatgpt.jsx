@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import c from "./Chatgpt.module.css";
 import { IoMdAdd } from "react-icons/io";
 import { LuSendHorizonal } from "react-icons/lu";
 import OpenAI from "openai";
+import { IoMdMenu } from "react-icons/io";
 
 function Chatgpt() {
+  // State for toggling sidebar
+  const [showSide, setShowSide] = useState(false);
   const API_KEY = "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";
 
   const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true });
@@ -45,6 +48,9 @@ function Chatgpt() {
           <div className={c.made}>Made By ABX</div>
         </section>
         <main className={c.chatBox}>
+          <div className={c.menu}>
+            <IoMdMenu size={27} onClick={(e) => setShowSide(!showSide)} />
+          </div>
           <div className={c.ABX}>ABX</div>
           <div className={c.output}>
             <div className={c.outputitems}>
@@ -65,6 +71,23 @@ function Chatgpt() {
           </div>
         </main>
       </div>
+      {showSide ? (
+        <section id={c.menusidebar}>
+          <div id={c.button}>
+            <button>New Chat</button>
+            <IoMdAdd />
+          </div>
+          <div id={c.history}>
+            <ul id={c.historyitems}>
+              <li>History</li>
+              <li>History</li>
+              <li>History</li>
+              <li>History</li>
+            </ul>
+          </div>
+          <div id={c.made}>Made By ABX</div>
+        </section>
+      ) : null}
     </>
   );
 }

@@ -9,10 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
-  margin: 10px 20px 0 20px;
   padding: 10px;
-  background-color: aliceblue;
 }
 .header .combine {
   display: flex;
@@ -45,9 +42,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
-  background-color: aliceblue;
-  padding: 10px;
   border-radius: 12px;
 }
 .header .sidesearch .icons {
@@ -103,9 +97,11 @@
   width: 300px;
   padding: 10px 5px 10px 5px;
   position: absolute;
+  margin-top: 20px;
   right: 0;
   margin-right: 20px;
   border-radius: 1rem;
+  z-index: 1;
 }
 .sideOptions .sideNav .sideNavCombine {
   display: flex;
@@ -124,7 +120,7 @@
 }
 .sideOptions .sideNav .sideNavCombine .arrow {
   position: absolute;
-  right: 15px;
+  right: 25px;
   cursor: pointer;
 }
 .profileView {
@@ -132,9 +128,10 @@
   flex-direction: column;
   position: absolute;
   right: 20px;
-  top: 80px;
+  top: 110px;
   gap: 1rem;
   border-radius: 1rem;
+  z-index: 2;
 }
 .profileView .profileView2 .profileViewOptions {
   display: flex;

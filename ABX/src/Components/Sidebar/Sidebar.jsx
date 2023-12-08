@@ -9,7 +9,6 @@ import { FaImages } from "react-icons/fa6";
 import { TbBulbFilled } from "react-icons/tb";
 import { FaLink } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
-import Chatgpt from "./ChatGPT/Chatgpt";
 
 function Sidebar() {
   const [showHide, setShowHide] = useState(false);
@@ -122,7 +121,6 @@ function Sidebar() {
           </div>
         </div>
       ) : null}
-      {gpt ? <Chatgpt /> : null}
     </>
   );
 }

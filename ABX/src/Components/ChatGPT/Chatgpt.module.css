@@ -1,68 +1,61 @@
 .container {
-  margin: 10px;
-  padding: 40px;
-  position: absolute;
+  padding: 10px;
   display: flex;
   flex-direction: row-reverse;
   gap: 1rem;
-  top: 90px;
-  left: 290px;
-  width: fit-content;
-  flex-grow: 1;
-  height: 82.3%;
   border-radius: 1rem;
-  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
-  background-color: aliceblue;
 }
-.container .sidebar {
+.sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   position: relative;
   width: 300px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 1rem;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
 }
-.container .sidebar .button {
+.sidebar .button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px 10px 20px;
+  padding: 15px 35px 15px 35px;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: transparent;
   border-radius: 0.5rem;
   cursor: pointer;
 }
-.container .sidebar .button button {
-  padding: 5px 10px 5px 20px;
+.sidebar .button button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-weight: 600;
 }
-.container .sidebar .history {
+.sidebar .history {
   position: absolute;
-  top: 100px;
+  top: 80px;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: transparent;
-  padding: 20px;
+  padding: 10px 20px 10px 20px;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
-.container .sidebar .history .historyitems {
+.sidebar .history .historyitems {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
-.container .sidebar .history .historyitems li {
+.sidebar .history .historyitems li {
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: transparent;
   list-style: none;
   padding: 10px 30px 10px 30px;
 }
-.container .sidebar .made {
+.sidebar .made {
   font-weight: bold;
 }
 .container .chatBox {
@@ -84,7 +77,7 @@
 .container .chatBox .output {
   padding: 10px;
   width: 100%;
-  height: 400px;
+  height: 360px;
 }
 .container .chatBox .output .outputitems {
   display: flex;
@@ -104,7 +97,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 80%;
   border-radius: 1rem;
   gap: 5px;
   padding: 5px 10px 5px 20px;
@@ -121,12 +114,77 @@
   background-color: transparent;
 }
 .container .info {
+  text-align: center;
   margin: 10px;
   color: rgb(0, 0, 0, 0.6);
 }
-
-@media screen and (max-width: 1024px) {
-  .container {
+#menusidebar {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  top: 45px;
+  right: 85px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+}
+#menusidebar #button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px 15px 35px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+#menusidebar #button button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+#menusidebar #history {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+#menusidebar #history #historyitems {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+#menusidebar #history #historyitems li {
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: transparent;
+  list-style: none;
+  padding: 10px 30px 10px 30px;
+}
+#menusidebar #made {
+  font-weight: bold;
+}
+.menu {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  .container .sidebar {
     display: none;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+  }
+  #menusidebar {
+    display: flex;
   }
 }
