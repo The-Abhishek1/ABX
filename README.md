@@ -21,5 +21,5 @@ To run this application on your system
 
 1.  Download the project using this link "https://github.com/The-Abhishek1/ABX.git"
 2.  Unzip the folder
-3.  run Cd ABX
+3.  run cd ABX
 4.  run npm run dev
