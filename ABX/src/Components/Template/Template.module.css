@@ -37,6 +37,7 @@
   border-radius: 1rem;
   padding: 20px;
   position: relative;
+  overflow: scroll;
 }
 .menusidebar {
   display: none;

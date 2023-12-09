@@ -48,7 +48,7 @@ function Header() {
             Resouce
           </NavLink>
           <NavLink href="" className={h.link}>
-            contact
+            Contact
           </NavLink>
         </div>
         <div className={h.sidesearch}>
