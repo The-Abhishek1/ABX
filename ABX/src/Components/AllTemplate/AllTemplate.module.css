@@ -15,6 +15,7 @@
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
   padding: 10px;
+  border-radius: 1rem;
 }
 .container .items img {
   width: 40px;
