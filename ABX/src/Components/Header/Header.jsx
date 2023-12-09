@@ -12,6 +12,8 @@ import { NavLink } from "react-router-dom";
 import { MdOutlineLightMode } from "react-icons/md";
 import { IoMdLogOut } from "react-icons/io";
 import { IoSettings } from "react-icons/io5";
+import Template from "../Template/Template";
+import { useId } from "react";
 function Header() {
   //State for handling closing and opening menu
   const [showOptions, setShowOptions] = useState(false);
@@ -21,8 +23,12 @@ function Header() {
 
   //state  for toggloing profile option
   const [prfoileshow, setProfileShow] = useState(false);
+  //State for passing props
+  const [hideTemplate, setHideTemplate] = useState(false);
   return (
     <>
+      {hideTemplate ? <Template dark={dark} /> : null}
+
       <div className={h.header}>
         <div className={h.combine}>
           <div className={h.logo}>
@@ -81,23 +87,44 @@ function Header() {
           </div>
         </div>
         <div className={h.menu}>
-          {showOptions ? (
-            <IoCloseCircleSharp
-              size={27}
-              onClick={(e) => {
-                setShowOptions(false);
-              }}
-              className={h.menuClose}
-            />
-          ) : (
-            <IoMdMenu
-              size={27}
-              onClick={(e) => {
-                setShowOptions(true);
-              }}
-              className={h.menuClose}
-            />
-          )}
+          <div className={h.theme}>
+            {dark ? (
+              <MdDarkMode
+                size={26}
+                className={h.sideIcons}
+                onClick={(e) => {
+                  setDark(!dark);
+                }}
+              />
+            ) : (
+              <MdOutlineLightMode
+                size={26}
+                className={h.sideIcons}
+                onClick={(e) => {
+                  setDark(!dark);
+                }}
+              />
+            )}
+          </div>
+          <div>
+            {showOptions ? (
+              <IoCloseCircleSharp
+                size={27}
+                onClick={(e) => {
+                  setShowOptions(false);
+                }}
+                className={h.menuClose}
+              />
+            ) : (
+              <IoMdMenu
+                size={27}
+                onClick={(e) => {
+                  setShowOptions(true);
+                }}
+                className={h.menuClose}
+              />
+            )}
+          </div>
         </div>
       </div>
       {showOptions ? (
@@ -150,6 +177,15 @@ function Header() {
           </div>
         </div>
       ) : null}
+      <div
+        className={h.profile}
+        id={h.profile}
+        onClick={(e) => {
+          setProfileShow(!prfoileshow);
+        }}
+      >
+        <img src={logo} alt="" />
+      </div>
     </>
   );
 }

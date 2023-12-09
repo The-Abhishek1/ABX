@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import t from "./Template.module.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
 import Chatgpt from "../ChatGPT/Chatgpt";
-function Template() {
+import AllTemplate from "../AllTemplate/AllTemplate";
+function Template({ dark }) {
   return (
     <>
       <div className={t.whole}>
@@ -14,7 +15,7 @@ function Template() {
           <Sidebar />
         </nav>
         <section className={t.chat}>
-          <Chatgpt />
+          <AllTemplate />
         </section>
       </div>
       <div className={t.menusidebar}>

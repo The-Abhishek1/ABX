@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Template from "./Components/Template/Template";
-
 function App() {
   return (
     <>
@@ -12,7 +11,6 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Template />} />
-            {/* <Route path="/" element={[<Header />, <Sidebar />]} /> */}
           </Routes>
         </BrowserRouter>
       </div>

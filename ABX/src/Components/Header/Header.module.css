@@ -81,11 +81,14 @@
   background-color: aliceblue;
   text-align: center;
 }
-.header .sidesearch .profile img {
+.profile img {
   width: 25px;
   height: 25px;
   border-radius: 1.5rem;
   cursor: pointer;
+}
+#profile {
+  display: none;
 }
 .sideOptions .sideNav {
   display: flex;
@@ -102,6 +105,7 @@
   margin-right: 20px;
   border-radius: 1rem;
   z-index: 1;
+  z-index: 3;
 }
 .sideOptions .sideNav .sideNavCombine {
   display: flex;
@@ -109,7 +113,6 @@
   align-items: center;
   padding: 10px;
   cursor: pointer;
-  border-radius: 1rem;
 }
 .sideOptions .sideNav .sideNavCombine:hover {
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
@@ -160,6 +163,9 @@
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
 }
+.theme {
+  display: none;
+}
 @media screen and (min-width: 650px) and (max-width: 950px) {
   .header .nav {
     display: none;
@@ -169,6 +175,7 @@
   }
   .header .menu {
     display: block;
+    cursor: pointer;
   }
   .sideOptions .sideNav {
     display: block;
@@ -186,7 +193,10 @@
     display: none;
   }
   .header .menu {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
   }
   .header .menu .menuClose {
     cursor: pointer;
@@ -202,6 +212,9 @@
     width: 35px;
     height: 30px;
   }
+  .theme {
+    display: block;
+  }
 }
 @media screen and (min-width: 950px) {
   .header .menu {
@@ -213,7 +226,10 @@
 }
 @media screen and (max-width: 480px) {
   .header .menu {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
   }
   .sideOptions .sideNav {
     display: none;
@@ -227,7 +243,11 @@
   .sideOptions .sideNav {
     display: block;
   }
-  .profileView {
-    display: none;
+
+  #profile {
+    display: block;
+    position: absolute;
+    top: 42px;
+    right: 120px;
   }
 }

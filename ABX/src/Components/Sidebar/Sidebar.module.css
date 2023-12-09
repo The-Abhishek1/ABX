@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 60px;
+  top: 20px;
 }
 
 .container .button button {
@@ -63,16 +63,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: 10px 20px 0 20px;
-  padding: 10px 20px 10px 20px;
+  margin: 0px 0 0 20px;
+  padding: 10px 20px 5px 20px;
   cursor: pointer;
   font-weight: bold;
 }
 #container2 {
-  padding: 20px 10px 35px 10px;
-}
-#button {
-  top: 30px;
+  padding: 20px 10px 15px 10px;
 }
 @media screen and (max-width: 950px) {
   .container {
@@ -83,12 +80,6 @@
   }
   #container2 {
     display: block;
-  }
-  #container2 {
-    padding-bottom: 105px;
-  }
-  #container2 .button {
-    top: 80px;
   }
 }
 
