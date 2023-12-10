@@ -7,9 +7,9 @@
 .header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
 }
 .header .combine {
   display: flex;
@@ -247,7 +247,11 @@
   #profile {
     display: block;
     position: absolute;
-    top: 42px;
     right: 120px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .logo {
+    display: none;
   }
 }

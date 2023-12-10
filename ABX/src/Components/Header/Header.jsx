@@ -86,6 +86,15 @@ function Header() {
             <img src={logo} alt="" />
           </div>
         </div>
+        <div
+          className={h.profile}
+          id={h.profile}
+          onClick={(e) => {
+            setProfileShow(!prfoileshow);
+          }}
+        >
+          <img src={logo} alt="" />
+        </div>
         <div className={h.menu}>
           <div className={h.theme}>
             {dark ? (
@@ -177,15 +186,6 @@ function Header() {
           </div>
         </div>
       ) : null}
-      <div
-        className={h.profile}
-        id={h.profile}
-        onClick={(e) => {
-          setProfileShow(!prfoileshow);
-        }}
-      >
-        <img src={logo} alt="" />
-      </div>
     </>
   );
 }

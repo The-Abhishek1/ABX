@@ -63,13 +63,19 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  margin: 0px 0 0 20px;
-  padding: 10px 20px 5px 20px;
+  padding: 10px;
+  width: 40px;
   cursor: pointer;
   font-weight: bold;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
 }
 #container2 {
   padding: 20px 10px 15px 10px;
+  box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
+  background-color: aliceblue;
+  margin-top: 8px;
 }
 @media screen and (max-width: 950px) {
   .container {
@@ -92,5 +98,19 @@
   }
   #container2 {
     display: none;
+  }
+}
+@media screen and (max-width: 376px) {
+  .home {
+    padding: 5px 10px 5px 10px;
+  }
+  .container .items {
+    gap: 0.1rem;
+  }
+  .container .items .item {
+    font-size: 12px;
+  }
+  .container .button button {
+    padding: 10px 20px 10px 20px;
   }
 }

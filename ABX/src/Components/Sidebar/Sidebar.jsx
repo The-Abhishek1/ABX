@@ -25,7 +25,7 @@ function Sidebar() {
         <div>
           <FaHome />
         </div>
-        <div> View All</div>
+        <div></div>
       </div>
       <div className={s.container}>
         <div className={s.items}>
