@@ -10,12 +10,12 @@
   background-color: aliceblue;
   padding: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 .header {
-  grid-column: 1/6;
+  grid-column: 1/9;
   height: 80px;
   padding: 10px;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
@@ -26,15 +26,15 @@
   justify-content: center;
 }
 .navbar {
-  grid-row: 2/6;
+  grid-row: 2/9;
   width: 300px;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
   border-radius: 1rem;
 }
 .chat {
-  grid-column: 2/6;
-  grid-row: 2/6;
+  grid-column: 2/9;
+  grid-row: 2/9;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
   border-radius: 1rem;
@@ -50,7 +50,7 @@
     display: none;
   }
   .chat {
-    grid-column: 1/6;
+    grid-column: 1/9;
   }
   .menusidebar {
     display: block;
@@ -71,5 +71,11 @@
   .menusidebar {
     width: 280px;
     margin-left: 20px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .whole {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
