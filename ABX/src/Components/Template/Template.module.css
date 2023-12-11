@@ -26,7 +26,8 @@
   justify-content: center;
 }
 .navbar {
-  grid-row: 2/9;
+  grid-row: 2/11;
+  grid-row: 2.5/11;
   width: 300px;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
@@ -34,7 +35,7 @@
 }
 .chat {
   grid-column: 2/9;
-  grid-row: 2/9;
+  grid-row: 2/11;
   box-shadow: 2px 2px 10px rgb(220, 229, 237), -2px -2px 10px rgb(220, 229, 237);
   background-color: aliceblue;
   border-radius: 1rem;
@@ -46,11 +47,15 @@
   display: none;
 }
 @media screen and (max-width: 950px) {
+  .header {
+    grid-column: 1/11;
+  }
   .navbar {
     display: none;
   }
   .chat {
-    grid-column: 1/9;
+    grid-column: 1/11;
+    margin-top: 40px;
   }
   .menusidebar {
     display: block;
